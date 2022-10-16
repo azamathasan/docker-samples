@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  node:
+    build:
+      context: ./quasar
+      dockerfile: Dockerfile
+    command: sh -c "tail -f /dev/null"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./node:/usr/src/app 
