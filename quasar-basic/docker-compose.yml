@@ -9,3 +9,5 @@ services:
       - "3000:3000"
     volumes:
       - ./node:/usr/src/app 
+      # After init quasar-project replace:
+      # - ./node:/usr/src/app/quasar-project
