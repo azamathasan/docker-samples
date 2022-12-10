@@ -5,6 +5,7 @@ services:
       context: ./node
       dockerfile: Dockerfile
     command: sh -c "tail -f /dev/null" # command to keep runing the container
+    # command: sh -c "npm run dev"
     ports:
       - "8080:8080"
     volumes:
