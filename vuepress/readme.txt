@@ -14,3 +14,14 @@
   to
     "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev src",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build src"
+12. exit
+13. docker-compose down
+14. In docker-compose.yml comment:
+        command: sh -c "tail -f /dev/null" # command to keep runing the container
+    and uncomment:
+        # command: sh -c "npm run dev"
+15. In node/Dockerfile comment: 
+        WORKDIR /usr/src/app
+    and uncomment:
+        # WORKDIR /usr/src/app/docs
+16. Run docker-compose and open localhost:8080 (or 0.0.0.0:8080 or like this)
