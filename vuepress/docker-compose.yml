@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  node:
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    command: sh -c "tail -f /dev/null" # command to keep runing the container
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./node:/usr/src/app 
