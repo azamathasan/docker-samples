@@ -9,9 +9,9 @@ services:
       restart: always
       environment:
         MYSQL_ROOT_PASSWORD: example
+        MYSQL_DATABASE: belka
         MYSQL_USER: root1
         MYSQL_PASSWORD: 123
-        # MYSQL_DB: db
       ports:
         - "3306:3306"
 
