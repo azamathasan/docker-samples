@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+# image: httpd:2.4
+  apache:
+    build:
+      context: ./apache
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./apache:/usr/local/apache2/htdocs/  # for html and other shared files
+      # - ./apache/httpd.conf /usr/local/apache2/conf/httpd.conf # file with 'ServerName 127.0.0.1'-line; this file also added to Dockerfile
